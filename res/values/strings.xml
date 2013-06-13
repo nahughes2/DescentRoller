@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Descent Roller</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="redLabel">Red</string>
+    <string name="blueLabel">Blue</string>
+    <string name="whiteLabel">White</string>
+    <string name="yellowLabel">Yellow</string>
+    <string name="greenLabel">Green</string>
+    <string name="blackLabel">Black</string>
+
+</resources>
