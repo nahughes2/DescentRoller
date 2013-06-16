@@ -6,6 +6,10 @@ public class Dice {
 	boolean miss;
 
 	public Dice(int color, int roll) {
+		range = 0;
+		damage = 0;
+		surge = 0;
+		
 		// RED
 		if (color == 0) {
 			switch (roll) {
@@ -76,25 +80,28 @@ public class Dice {
 				miss = true;
 				break;
 			case 1:
-				damage = 4;
+				range = 1;
+				damage = 3;
+				surge = 1;
 				break;
 			case 2:
 				range = 1;
 				damage = 3;
-				break;
-			case 3:
-				range = 1;
-				damage = 3;
 				surge = 1;
 				break;
-			case 4:
+			case 3:
 				range = 2;
+				damage = 2;
+				break;
+			case 4:
+				range = 3;
 				damage = 1;
 				surge = 1;
 				break;
 			case 5:
-				range = 2;
-				damage = 2;
+				range = 3;
+				damage = 1;
+				surge = 1;
 				break;
 			default:
 				break;
@@ -104,28 +111,26 @@ public class Dice {
 		if (color == 3) {
 			switch (roll) {
 			case 0:
-				miss = true;
+				range = 1;
+				damage = 1;
 				break;
 			case 1:
-				damage = 4;
+				range = 2;
+				damage = 1;
 				break;
 			case 2:
-				range = 1;
-				damage = 3;
+				range = 2;
+				surge = 1;
 				break;
 			case 3:
-				range = 1;
-				damage = 3;
+				range = 2;
 				surge = 1;
 				break;
 			case 4:
-				range = 2;
-				damage = 1;
-				surge = 1;
+				range = 3;
 				break;
 			case 5:
-				range = 2;
-				damage = 2;
+				range = 3;
 				break;
 			default:
 				break;
@@ -135,27 +140,24 @@ public class Dice {
 		if (color == 4) {
 			switch (roll) {
 			case 0:
-				miss = true;
+				damage = 3;
 				break;
 			case 1:
-				damage = 4;
+				damage = 3;
 				break;
 			case 2:
-				range = 1;
 				damage = 3;
 				break;
 			case 3:
-				range = 1;
-				damage = 3;
+				damage = 2;
 				surge = 1;
 				break;
 			case 4:
-				range = 2;
+				range = 1;
 				damage = 1;
-				surge = 1;
 				break;
 			case 5:
-				range = 2;
+				range = 1;
 				damage = 2;
 				break;
 			default:
@@ -166,34 +168,46 @@ public class Dice {
 		if (color == 5) {
 			switch (roll) {
 			case 0:
-				miss = true;
 				break;
 			case 1:
-				damage = 4;
+				surge = 1;
 				break;
 			case 2:
-				range = 1;
-				damage = 3;
+				surge = 1;
 				break;
 			case 3:
 				range = 1;
-				damage = 3;
-				surge = 1;
+				damage = 1;
 				break;
 			case 4:
-				range = 2;
+				range = 1;
 				damage = 1;
-				surge = 1;
 				break;
 			case 5:
-				range = 2;
-				damage = 2;
+				range = 1;
+				damage = 1;
 				break;
 			default:
 				break;
 			}
 		}
 
+	}
+	
+	public boolean getMiss() {
+		return this.miss;
+	}
+	
+	public int getRange() {
+		return this.range;
+	}
+	
+	public int getDamage() {
+		return this.damage;
+	}
+	
+	public int getSurge() {
+		return this.surge;
 	}
 
 }
