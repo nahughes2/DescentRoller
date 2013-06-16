@@ -1,130 +1,141 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/darker_gray"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" >
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context=".MainActivity" >
 
-    <LinearLayout
-        android:id="@+id/redButton"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:background="@color/red"
-        android:orientation="vertical" >
-    </LinearLayout>
 
-    <TextView
-        android:id="@+id/redDice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/redButton"
-        android:layout_marginTop="16dp"
-        android:text="0"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <LinearLayout
-        android:id="@+id/blueButton"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:layout_marginLeft="12dp"
-        android:layout_toRightOf="@id/redButton"
-        android:background="@color/blue"
-        android:orientation="vertical" >
-    </LinearLayout>
+        <LinearLayout
+                android:id="@+id/redButton"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@color/red"
+                android:orientation="vertical" >
+        </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/whiteButton"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:layout_marginLeft="12dp"
-        android:layout_toRightOf="@id/blueButton"
-        android:background="@color/white"
-        android:orientation="vertical" >
-    </LinearLayout>
+        <LinearLayout
+                android:id="@+id/blueButton"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="24dp"
+                android:background="@color/blue"
+                android:orientation="vertical"
+                android:layout_alignTop="@+id/redButton"
+                android:layout_toRightOf="@+id/redButton">
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/whiteDice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/redDice"
-        android:layout_alignBottom="@+id/redDice"
-        android:layout_alignLeft="@+id/whiteButton"
-        android:text="0"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        <LinearLayout
+                android:id="@+id/whiteButton"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:layout_alignTop="@+id/blueButton"
+                android:layout_toRightOf="@+id/blueButton"
+                android:layout_marginLeft="24dp">
+        </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/yellowButton"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:layout_marginLeft="12dp"
-        android:layout_toRightOf="@+id/whiteButton"
-        android:background="@color/yellow"
-        android:orientation="vertical" >
-    </LinearLayout>
+        <LinearLayout
+                android:id="@+id/yellowButton"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@color/yellow"
+                android:orientation="vertical"
+                android:layout_alignTop="@+id/whiteButton"
+                android:layout_toRightOf="@+id/whiteButton"
+                android:layout_marginLeft="24dp">
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/yellowDice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/redDice"
-        android:layout_alignBottom="@+id/redDice"
-        android:layout_alignLeft="@+id/yellowButton"
-        android:text="0"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        <LinearLayout
+                android:id="@+id/greenButton"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@color/green"
+                android:orientation="vertical"
+                android:layout_marginLeft="24dp"
+                android:layout_alignTop="@+id/blackButton"
+                android:layout_toLeftOf="@+id/blackButton">
+        </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/greenButton"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:layout_marginLeft="12dp"
-        android:layout_toRightOf="@id/yellowButton"
-        android:background="@color/green"
-        android:orientation="vertical" >
-    </LinearLayout>
+        <LinearLayout
+                android:id="@+id/blackButton"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@color/black"
+                android:orientation="vertical"
+                android:layout_alignTop="@+id/yellowButton"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="24dp">
+        </LinearLayout>
+
+
 
     <TextView
-        android:id="@+id/greenDice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/redDice"
-        android:layout_alignBottom="@+id/redDice"
-        android:layout_alignLeft="@+id/greenButton"
-        android:text="0"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <LinearLayout
-        android:id="@+id/blackButton"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:layout_marginLeft="12dp"
-        android:layout_toRightOf="@id/greenButton"
-        android:background="@color/black"
-        android:orientation="vertical" >
-    </LinearLayout>
+            android:id="@+id/redDice"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_below="@+id/redButton"
+            android:layout_alignLeft="@+id/redButton"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"/>
 
     <TextView
-        android:id="@+id/blackDice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/redDice"
-        android:layout_alignBottom="@+id/redDice"
-        android:layout_alignLeft="@+id/blackButton"
-        android:text="0"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:id="@+id/blueDice"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_alignTop="@+id/whiteDice"
+            android:layout_alignLeft="@+id/blueButton"
+            android:gravity="center_horizontal"/>
 
     <TextView
-        android:id="@+id/blueDice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/whiteDice"
-        android:layout_alignBottom="@+id/whiteDice"
-        android:layout_alignLeft="@+id/blueButton"
-        android:text="0"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:id="@+id/whiteDice"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_alignTop="@+id/redDice"
+            android:layout_alignLeft="@+id/whiteButton"
+            android:gravity="center_horizontal"/>
+
+    <TextView
+            android:id="@+id/yellowDice"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_alignTop="@+id/whiteDice"
+            android:layout_alignLeft="@+id/yellowButton"
+            android:gravity="center_horizontal"/>
+
+    <TextView
+            android:id="@+id/greenDice"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_alignTop="@+id/blackDice"
+            android:layout_alignLeft="@+id/greenButton"
+            android:gravity="center_horizontal"/>
+
+    <TextView
+            android:id="@+id/blackDice"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_alignTop="@+id/whiteDice"
+            android:layout_alignLeft="@+id/blackButton"
+            android:gravity="center_horizontal"/>
+
 
 </RelativeLayout>
